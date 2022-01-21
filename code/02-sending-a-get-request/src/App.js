@@ -7,8 +7,12 @@ function App() {
   const [movies, setMovies] = useState([]);
 
   function fetchMoviesHandler() {
+    //fetch api
+    //fetch(url, {options}) options is optional, options include method, method is get by default
+    //send get req to api
     fetch('https://swapi.dev/api/films/')
       .then((response) => {
+      //parse json to js 
         return response.json();
       })
       .then((data) => {
